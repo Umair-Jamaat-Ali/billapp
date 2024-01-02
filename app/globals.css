@@ -2,26 +2,103 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* src/App.css */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.container {
+  text-align: center;
+}
+
+button {
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Modal styles */
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  width: 60%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Animation for modal */
+.modal-content {
+  animation: modalAnimation 0.3s ease-out;
+}
+
+@keyframes modalAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.btn{
+  background-color: green;
+  width: auto;
+  height: 50px;
+  border-radius: 0%;
+  opacity: 0.75;
+
+}
+.btn1{
+  background-color: red;
+  width: auto;
+  height: 50px;
+  border-radius: 0%;
+  opacity: 0.75;
+
+}
+
+.btn:hover{
+  background-color: green;
+  width: auto;
+  height: 50px;
+  border-radius: 30px;
+  opacity: 1;
+  transform: scale(1.20,1.20);
+  color: #f2f2f2;
+
+
+}
+
+.btn1:hover{
+  background-color: red;
+  width: auto;
+  height: 50px;
+  border-radius: 30px;
+  opacity: 1;
+  transform: scale(1.20,1.20);
+  color: #f2f2f2;
+
+
 }
